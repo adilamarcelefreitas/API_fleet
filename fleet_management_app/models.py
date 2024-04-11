@@ -17,3 +17,4 @@ class Trajectories(models.Model):
 
   def str(self):
     return f"Trajectory ID: {self.id}, Taxi: {self.taxi}, Date: {self.date}, Latitude: {self.latitude}, Longitude: {self.longitude}"
+
