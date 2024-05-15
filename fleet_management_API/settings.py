@@ -75,11 +75,18 @@ WSGI_APPLICATION = 'fleet_management_API.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'DB', 
+        'USER': 'postgres',
+        'PASSWORD': '915011',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
